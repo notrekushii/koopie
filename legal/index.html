@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koopie - Policies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Deeper, almost black background for the body */
+            --bg-color: #0A0A0A; /* Very dark, near black */
+            --container-bg-color: #1a1a1a; /* Slightly lighter than body for the main content box */
+            --text-color: #e0e0e0;
+            --accent-color-light: #83d0e7; /* A brighter green similar to bleed.bot */
+            --accent-color-dark: #65b2df;
+            --border-color: #333;
+            --link-color: #64B5F6; /* A light blue for links */
+            --link-hover-color: #90CAF9;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @font-face {
+            font-family: Satoshi;
+            src: url(../fonts/satoshi/fonts/Satoshi-Light.woff);
+        }
+
+        body {
+            font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            background-image: radial-gradient(circle at top left, #2c2c2c 1%, transparent 20%),
+                              radial-gradient(circle at bottom right, #2c2c2c 1%, transparent 20%); /* Subtle dark gradients to mimic texture */
+            background-size: 800px 800px, 800px 800px; /* Adjust size of gradients */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top left, bottom right;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px; /* Similar max-width to bleed.bot content */
+            padding: 40px 20px;
+            box-sizing: border-box;
+            background-color: var(--container-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin: 40px 0; /* Add margin top/bottom */
+            z-index: 1; /* Ensure container is above the background gradients */
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color-light);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 1em;
+            color: var(--text-color); /* Main title in white */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 2em;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: var(--accent-color-dark);
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+
+        ul li {
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+
+        strong {
+            color: var(--accent-color-light);
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>koopie - Privacy Policy & Terms of Service</h1>
+
+        <section id="privacy-policy">
+            <h2>Privacy Policy</h2>
+            <p>This Privacy Policy explains how koopie ("the Bot") collects, uses, and discloses information when you use our services on Discord.</p>
+
+            <h3>1. Data Collection</h3>
+            <p>The Bot collects the following types of information:</p>
+            <ul>
+                <li><strong>User IDs:</strong> We collect User IDs of users who interact with the Bot. This is necessary for the Bot's functionality, such as identifying users for commands, permissions, or storing user-specific settings.</li>
+                <li><strong>Guild (Server) IDs:</strong> We collect Guild IDs of the Discord servers the Bot is in. This is necessary to operate the Bot within those servers and to store server-specific configurations (e.g., custom prefixes, welcome messages, logging channel settings).</li>
+                <li><strong>Channel IDs:</strong> We may collect Channel IDs for specific features, such as setting up logging channels, designated command channels, or announcement channels.</li>
+                <li><strong>Message Content (Limited):</strong>
+                    <ul>
+                        <li><strong>Direct Interactions:</strong> The Bot processes your message content when you directly interact with it (e.g., using slash commands, mentioning the bot, or sending messages in designated channels). This content is processed solely to fulfill your command or request and is generally not stored persistently unless explicitly required for a specific feature (e.g., if you use a "note-taking" command, the note content might be stored).</li>
+                        <li><strong>Logging/Moderation (Opt-in/Configurable):</strong> If a server administrator enables specific logging or moderation features, the Bot might process and potentially temporarily store message content, user IDs, and channel IDs for the purpose of maintaining server logs or enforcing server rules. This functionality is <strong>opt-in</strong> and configurable by server administrators.</li>
+                    </ul>
+                </li>
+                <li><strong>Voice Activity (If Applicable):</strong> If the Bot joins voice channels (e.g., for music playback or voice moderation features), it may temporarily process voice data. This data is processed in real-time and is <strong>never</strong> recorded or stored by the Bot.</li>
+                <li><strong>User-Provided Data (Opt-in/Configurable):</strong> The Bot may store data that users explicitly provide for specific features (e.g., custom role assignments, game statistics, reminder content, user-specific settings). This data is stored only with your consent through your interaction with the respective command.</li>
+            </ul>
+
+            <h3>2. How We Use Information</h3>
+            <p>The information collected by the Bot is used solely for the following purposes:</p>
+            <ul>
+                <li>To provide and operate the Bot's intended features and services.</li>
+                <li>To respond to your commands and requests.</li>
+                <li>To maintain server-specific configurations and settings.</li>
+                <li>To improve the Bot's functionality and user experience (e.g., error reporting).</li>
+                <li>For moderation and logging features, as configured by server administrators.</li>
+                <li>To comply with Discord's Terms of Service and Developer Policy.</li>
+            </ul>
+
+            <h3>3. Data Storage and Retention</h3>
+            <ul>
+                <li>User IDs, Guild IDs, and Channel IDs are stored for as long as the Bot is in a server or as long as a feature requiring their storage is active.</li>
+                <li>Message content processed for command fulfillment is generally not stored persistently.</li>
+                <li>User-provided data is stored until the user or a server administrator explicitly requests its deletion or removes the corresponding feature.</li>
+                <li>Data collected for logging/moderation features is retained as configured by the server administrator or for a limited period necessary for the feature's operation.</li>
+                <li>Voice data (if applicable) is processed in real-time and not stored.</li>
+            </ul>
+
+            <h3>4. Data Sharing and Disclosure</h3>
+            <p>The Bot does not share any collected data with third parties, except in the following limited circumstances:</p>
+            <ul>
+                <li><strong>With Discord:</strong> Information is shared with Discord's API as necessary to operate the Bot (e.g., sending messages, managing roles).</li>
+                <li><strong>Legal Requirements:</strong> If required by law or valid legal process.</li>
+                <li><strong>Service Providers (If Applicable):</strong> If the Bot uses third-party services (e.g., a database provider, an external API for specific features), data may be temporarily processed by these services to fulfill the Bot's functions. We strive to use providers with strong data privacy practices. (e.g., `[Mention specific third-party services like a music API, if applicable]`)</li>
+            </ul>
+
+            <h3>5. Your Rights and Choices</h3>
+            <ul>
+                <li><strong>Access and Deletion:</strong> You can request access to or deletion of your personal data stored by the Bot. Please contact <a href="https://discord.gg/KPbRRPv9jU">our support server</a> or email us at <a href="mailto:rekushii@icloud.com">rekushii@icloud.com</a>. For server-specific data, server administrators may have tools to manage or delete it.</li>
+                <li><strong>Opt-Out:</strong> You can remove the Bot from your server at any time, which will result in the deletion of most server-specific data within 1 day.</li>
+                <li><strong>Server Administrator Control:</strong> Server administrators have control over most data collected within their servers through the Bot's configuration commands.</li>
+            </ul>
+
+            <h3>6. Data Security</h3>
+            <p>We implement reasonable technical and organizational measures to protect the information collected by the Bot from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+
+            <h3>7. Age Limitations</h3>
+            <p>The Bot is intended for users who are at least 13 years old, in accordance with Discord's Terms of Service. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.</p>
+
+            <h3>8. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on <a href="https://discord.gg/KPbRRPv9jU">discord.gg/KPbRRPv9jU</a>. Your continued use of the Bot after any changes constitutes your acceptance of the new Privacy Policy.</p>
+
+            <h3>9. Contact Us</h3>
+            <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+            <ul>
+                <li><strong>Discord Support Server:</strong> <a href="https://discord.gg/KPbRRPv9jU">discord.gg/KPbRRPv9jU</a></li>
+                <li><strong>Email:</strong> <a href="mailto:rekushii@icloud.com">rekushii@icloud.com</a></li>
+                <li><strong>Discord User:</strong> rekureturned</li>
+            </ul>
+            <p><strong>Last Updated:</strong> July 27, 2025</p>
+        </section>
+
+        <hr style="border-color: var(--border-color); margin: 4em 0;">
+
+        <section id="terms-of-service">
+            <h2>Terms of Service</h2>
+            <p>These Terms of Service ("Terms") govern your use of the `[Your Bot's Name]` Discord bot ("the Bot"), provided by `[Your Name/Company Name]` ("we," "us," or "our"). By adding the Bot to your Discord server or interacting with it, you agree to be bound by these Terms.</p>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By using the Bot, you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree with any part of these Terms, you must not use the Bot.</p>
+
+            <h3>2. Eligibility</h3>
+            <p>You must be at least 13 years old to use the Bot, in accordance with Discord's Terms of Service. By using the Bot, you represent and warrant that you meet this age requirement.</p>
+
+            <h3>3. Use of the Bot</h3>
+            <ul>
+                <li><strong>Permitted Use:</strong> The Bot is provided for legitimate use within Discord servers as intended by its features.</li>
+                <li><strong>Prohibited Conduct:</strong> You agree not to use the Bot for any unlawful purpose or in any way that violates these Terms, Discord's Terms of Service, or Discord's Developer Policy. Prohibited conduct includes, but is not limited to:
+                    <ul>
+                        <li>Attempting to interfere with the Bot's operation or security.</li>
+                        <li>Using the Bot to harass, abuse, or send unsolicited messages (spam) to others.</li>
+                        <li>Using the Bot for any malicious, illegal, or harmful activities.</li>
+                        <li>Circumventing any limitations or restrictions imposed by the Bot or its features.</li>
+                        <li>Reverse engineering, decompiling, or disassembling any part of the Bot.</li>
+                        <li>Using the Bot to distribute malware, viruses, or other harmful code.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>4. Data Privacy</h3>
+            <p>Our collection and use of your information are governed by our Privacy Policy, which is incorporated by reference into these Terms. By using the Bot, you consent to the data practices described in our Privacy Policy.</p>
+
+            <h3>5. Disclaimers</h3>
+            <ul>
+                <li><strong>"As Is" Basis:</strong> The Bot is provided "as is" and "as available," without any warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</li>
+                <li><strong>No Guarantees:</strong> We do not guarantee that the Bot will be uninterrupted, error-free, secure, or free from viruses or other harmful components. We are not responsible for any damage to your Discord server or data that may result from the use of the Bot.</li>
+                <li><strong>Feature Availability:</strong> Features and functionality of the Bot may change or be removed at any time without prior notice.</li>
+            </ul>
+
+            <h3>6. Limitation of Liability</h3>
+            <p>To the fullest extent permitted by applicable law, in no event shall `[Your Name/Company Name]` be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the Bot; (b) any conduct or content of any third party on the Bot; (c) any content obtained from the Bot; and (d) unauthorized access, use, or alteration of your transmissions or content.</p>
+
+            <h3>7. Termination</h3>
+            <p>We reserve the right to suspend or terminate your access to the Bot at our sole discretion, without notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the Bot will immediately cease.</p>
+
+            <h3>8. Changes to These Terms</h3>
+            <p>We may revise these Terms from time to time. The most current version of the Terms will always be available on <a href="https://discord.gg/KPbRRPv9jU">discord.gg/KPbRRPv9jU</a>. By continuing to access or use the Bot after revisions become effective, you agree to be bound by the revised Terms. If you do not agree to the new Terms, you must stop using the Bot.</p>
+
+            <h3>9. Governing Law</h3>
+            <p>These Terms shall be governed and construed in accordance with the laws of `[Your Country/State]`, without regard to its conflict of law provisions.</p>
+
+            <h3>10. Contact Information</h3>
+            <p>If you have any questions about these Terms, please contact us at:</p>
+            <ul>
+                <li><strong>Discord Support Server:</strong> <a href="https://discord.gg/KPbRRPv9jU">discord.gg/KPbRRPv9jU</a></li>
+                <li><strong>Email:</strong> <a href="mailto:rekushii@icloud.com">rekushii@icloud.com</a></li>
+                <li><strong>Discord User:</strong> rekureturned</li>
+            </ul>
+            <p><strong>Last Updated:</strong> July 27, 2025</p>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 koopie. All rights reserved.</p>
+    </div>
+</body>
+</html>
