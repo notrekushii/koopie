@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koopie - Legal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <style>
+        :root {
+            /* Deeper, almost black background for the body */
+            --bg-color: #0A0A0A; /* Very dark, near black */
+            --container-bg-color: #1a1a1a; /* Slightly lighter than body for the main content box */
+            --text-color: #e0e0e0;
+            --accent-color-light: #83d0e7; /* A brighter green similar to bleed.bot */
+            --accent-color-dark: #65b2df;
+            --border-color: #333;
+            --link-color: #64B5F6; /* A light blue for links */
+            --link-hover-color: #90CAF9;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @font-face {
+            font-family: Satoshi;
+            src: url(../fonts/satoshi/fonts/Satoshi-Light.woff);
+        }
+
+        body {
+            font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            background-image: radial-gradient(circle at top left, #2c2c2c 1%, transparent 20%),
+                              radial-gradient(circle at bottom right, #2c2c2c 1%, transparent 20%); /* Subtle dark gradients to mimic texture */
+            background-size: 800px 800px, 800px 800px; /* Adjust size of gradients */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top left, bottom right;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px; /* Similar max-width to bleed.bot content */
+            padding: 40px 20px;
+            box-sizing: border-box;
+            background-color: var(--container-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin: 40px 0; /* Add margin top/bottom */
+            z-index: 1; /* Ensure container is above the background gradients */
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color-light);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 1em;
+            color: var(--text-color); /* Main title in white */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 2em;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: var(--accent-color-dark);
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+
+        ul li {
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+
+        strong {
+            color: var(--accent-color-light);
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>koopie</h1>
+
+        <section id="privacy-policy">
+            <h2>Coming soon</h2>
+            <p>This page will be available at a later date.</p>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 koopie. All rights reserved.</p>
+    </div>
+</body>
+</html>
