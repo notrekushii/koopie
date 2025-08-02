@@ -285,7 +285,7 @@
             <script>
                 async function fetchDiscordStats() {
                     try {
-                        const res = await fetch('sftp://bot-service-eu-central-07.cybrancee.com:1902/api/discord/stats');
+                        const res = await fetch('https://bot-service-eu-central-07.cybrancee.com:1902/api/discord/stats');
 
                         if (!res.ok) {
                             throw new Error(`HTTP error; status: ${res.status}}`);
