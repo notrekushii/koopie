@@ -285,16 +285,16 @@
             <script>
                 async function fetchDiscordStats() {
                     try {
-                        const res = await fetch('https://bot-service-eu-central-07.cybrancee.com:1902/api/discord/stats');
+                        const res = await fetch('https://bot-service-eu-central-07.cybrancee.com:1902/api/discord/stats?key=ptlc_cm5E0MROs73N83AK4FHkME8LmW84KYEz7pvRd5txhjX');
 
                         if (!res.ok) {
                             throw new Error(`HTTP error; status: ${res.status}}`);
                         }
 
                         const data = await res.json();
-                        document.getElementById("public_discord_statistics").textContent = `Powering <strong>${data.users.toLocaleString()}</strong> users across <strong>${data.guilds.toLocaleString()}</strong> communities`;
+                        document.getElementById("public_discord_statistics").innerHTML = `Powering <strong>${data.users.toLocaleString()}</strong> users across <strong>${data.guilds.toLocaleString()}</strong> communities`;
                     } catch (error) {
-                        document.getElementById("public_discord_statistics").textContent = `Powering <strong>???</strong> users across <strong>???</strong> communities`;
+                        document.getElementById("public_discord_statistics").innerHTML = `Powering <strong>???</strong> users across <strong>???</strong> communities`;
                     }
                 }
 
