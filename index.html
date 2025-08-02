@@ -283,12 +283,26 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <p class="mb-4 md:mb-0" id="public_discord_statistics">Powering <strong>[SOON]</strong> users across <strong>[SOON]</strong> communities</p>
             <script>
-                async function getDiscordStats() {
-                    const res = await fetch('api/discord/stats');
-                    const data = await res.json();
-                    document.getElementById("public_discord_statistics").textContent = `Powering <strong>${data.users}</strong> users across <strong>${data.guilds}</strong> communities`;
+                async function fetchDiscordStats() {
+                    try {
+                        const res = await fetch('https://www.koopie.co.uk/api/discord/stats');
+
+                        if (!res.ok) {
+                            throw new Error(`HTTP error; status: ${res.status}}`);
+                        }
+
+                        const data = await res.json();
+                        document.getElementById("public_discord_statistics").textContent = `Powering <strong>${data.users.toLocaleString()}</strong> users across <strong>${data.guilds.toLocaleString()}</strong> communities`;
+                    } catch (error) {
+                        document.getElementById("public_discord_statistics").textContent = `Powering <strong>???</strong> users across <strong>???</strong> communities`;
+                    }
                 }
-                getDiscordStats();
+
+                // run when the page loads
+                fetchDiscordStats();
+
+                // set every minute to keep it fresh
+                setInterval(fetchDiscordStats, 60_000);
             </script>
             <div class="flex space-x-4">
                 <a href="https://discord.gg/KPbRRPv9jU" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Support Server</a>
